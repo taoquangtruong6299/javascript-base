@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var num_quiz;
+    var to_grade;
+    var count = 0;
+    var total;
+    // var answers = [];
+    var total_quizzes;
+    num_quiz = parseInt(window.prompt("How many questions are in the quiz",0));
+    var answers = new Array(num_quiz);
+    console.log(answers.length);
+    for (i=0; i < answers.length; i++)
+    {
+      console.log(answers.length);
+      answers[i] = parseInt(window.prompt("Dap an"+i,0));
+    }
+    console.log(answers);
+    // for (i=0; i < answers.length; i++)
+    // {
+    //   document.write("Dap an"+answers[i]);
+    // }
+    document.write("Ansewer:"+answers);
+    document.write("</br>");
+    // total_quizzes = parseInt(window.prompt("How many quizzes do you wantto grade",0));
+    for (i=0; i < answers.length; i++)
+    {
+      var to_grade = parseInt(window.prompt("Enter the answer to be graded "+i+":",0));
+      if(to_grade == answers[i]) {
+        count ++;
+      }
+
+    }
+    document.write("So cau tra loi dung:"+count);
+    document.write("</br>");
+    total = parseFloat(count/num_quiz)*100;
+    document.write("Phan tram chinh xac"+total);
+  </script>
+</body>
+</html>

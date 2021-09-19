@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+   var math ;
+   var physics ;
+   var chemistry ;
+   math = parseInt(window.prompt("Math",0));
+   physics = parseInt(window.prompt("Math",0));
+   chemistry = parseInt(window.prompt("Math",0));
+
+   var average = (math+physics+chemistry)/3;
+   if(average>=8)
+   {
+    document.write("Rank A");
+   }else if (average<8 && average>=6.5){
+    document.write("Rank B");
+   }else if (average<6.5 && average>=5){
+    document.write("Rank C");
+   }else if (average<5){
+    document.write("Rank D");
+   }
+
+  </script>
+</body>
+</html>

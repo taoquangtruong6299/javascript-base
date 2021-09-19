@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var strToday;
+    var now;
+
+    now = new Date();
+    now = now.toLocaleDateString();
+
+    strToday = window.prompt("Enter today's date",now);
+
+    document.write(strToday+"<br/>");
+    document.write(strToday+"<br/>");
+
+    document.write("Today is:" + strToday);
+
+    window.alert(strToday);
+    window.alert("Today is: " + strToday);
+    window.alert("Today is: " + "\n" + strToday);
+    window.alert("Today is: " + "\n" + strToday + "\nHave a nice day");
+  </script>
+</body>
+</html>

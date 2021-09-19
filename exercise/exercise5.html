@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var greeting1 = "Hello!";
+    var greeting2 = "Have a nice day!";
+    var yourName;
+
+    yourName = window.prompt("Enter your name","");
+    yourName = yourName + ".";
+    // var greeting3 = greeting1 + " " + greeting2;
+    // document.write(greeting3+ "<br\>");
+    // document.write(greeting1 + greeting2);
+    // document.write("<br/>");
+    // document.write(greeting1 + " " + greeting2);
+
+    // window.alert(greeting1 + greeting2);
+    // window.alert(greeting1 + " " + greeting2);
+    // window.alert(greeting1 + "\n" + greeting2);
+
+    document.write(greeting1 + yourName + greeting2);
+    document.write("<br/>");
+    document.write(greeting1 + " " + yourName + " " + greeting2);
+
+    window.alert(greeting1 + yourName + greeting2);
+    window.alert(greeting1 + " " + yourName + " " + greeting2);
+    window.alert(greeting1 + " " + yourName + "\n" + greeting2);
+    yourName = window.prompt("Enter your name", "");
+    yourName = yourName + ".";
+    window.alert("You have changed your name!"+"\n"+"Your name is now"+yourName);
+    </script>
+</body>
+</html>
