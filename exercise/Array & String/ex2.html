@@ -15,19 +15,11 @@
    ];
 
 function property_value(array, property_key) {
-	var arr = [],
-		index = -1,
-		arrlen = array.length,array_items;
-
-	while (++index < arrlen) {
-		array_items = array[index];
-
-  if (array_items.hasOwnProperty(property_key))
-      {
-	 arr[arr.length] = array_items[property_key];
-      }
-	}
-
+  var arr = [];
+  for (i = 0; i < library.length;i++)
+  {
+    arr.push(library[i][property_key]);
+  }
 	return arr;
 }
 
