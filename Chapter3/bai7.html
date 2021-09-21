@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var caesar = function(string ,num) {
+      var arr = [];
+      for(let i=0;i<string.length;i++)
+      {
+        if(!(/[a-zA-Z]/.test(string[i])))
+          {
+           arr[i]=string[i]; continue;
+          }
+        var n = string.charCodeAt(i) + num;
+        if (string[i] == string[i].toLowerCase())
+        {
+          if(n>122)
+            {
+              while(n>122)
+              {
+                n-=26;
+              }
+            }
+        else
+          {
+            while(n<97)
+            {
+              n+=26;
+            }
+          }
+        }
+        else
+          {
+            if(n>90)
+            {
+              while(n>90)
+              {
+                n-=26;
+              }
+            }
+          else
+            {
+              while(n<65)
+              {
+                n+=26;
+              }
+            }
+          }
+          arr[i]=String.fromCharCode(n);
+      }
+    return arr.join('');
+  }
+  console.log(caesar("Hello, World!", 5));
+  console.log(caesar('A', 1));
+  console.log(caesar('Mjqqt, Btwqi!', -5));
+  </script>
+</body>
+</html>
