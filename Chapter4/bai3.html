@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var a = new Array(100);
+    function sort(a,n) {
+      var temp;
+      for(var i = 0;i < n-1;i++){
+        for(var j=i+1;j<n;j++){
+          if(a[i]>a[j])
+          {
+            temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+          }
+        }
+      }
+    }
+    function timsolanxuathien(a,n) {
+      sort(a,n);
+      var max = 0;
+      var dem = 1;
+      var xuathien;
+      for(var i=0;i<n;i++)
+      {
+        if(a[i]==a[i+1])
+        {
+          dem++;
+            if(dem>max)
+            {
+              max=dem;
+              xuathien = a[i]
+            }
+        }
+        else
+        {
+          dem=1;
+        }
+      }
+      return console.log(xuathien);
+
+    }
+    var b =[2,2,2,3,3,3,3,4,4,4,4,4];
+    timsolanxuathien(b,11);
+  </script>
+</body>
+</html>

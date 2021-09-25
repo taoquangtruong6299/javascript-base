@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var x = window.prompt("Nhap x:","");
+  var y = window.prompt("Nhap y:","");
+  var dinhdang = "00"+y+"L"+x+x+x+x;
+  console.log(dinhdang);
+  if (dinhdang.match("00[2-5]L\\d{4}")) //Kiểm tra bằng biểu thức chính quy
+         console.log("phu hop");
+      else
+      console.log("ko phu hop");
+  </script>
+</body>
+</html>

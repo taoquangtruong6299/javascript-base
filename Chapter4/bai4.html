@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  function Giaodichdat(ma,date,price,option,area,total){
+    this.category = "GD-Dat",
+    this.ma = ma;
+    this.date = date;
+    this.price = price;
+    this.option = option;
+    this.area = area;
+    this.total = total;
+  }
+
+
+
+  function Giaodichnha(ma,date,price,option,address,area,total){
+    this.category = "GD-Nha",
+    this.ma = ma;
+    this.date = date;
+    this.price = price;
+    this.option = option;
+    this.address = address;
+    this.area = area;
+    this.total = total;
+  }
+  var manage = {
+    list: [],
+    addGDD = function(ma,date,price,option,area) {
+      var total;
+      if(option=='B'||option=='C') total = price*area;
+      if(option=='A') total = price*area*1.5;
+      for(i=0;i<this.list.length;i++){
+        if(ma == this.list[i].ma){
+          return alert("can't not add");
+        }
+      }
+      return this.list.push(new Giaodichdat(ma,date,price,option,area,total));
+    },
+
+    addGDN = function(ma,date,price,option,address,area) {
+      var total;
+      if(option=='caocap') total = price*area;
+      if(option=='thuong') total = price*area*0.9;
+      for(i=0;i<this.list.length;i++){
+        if(ma == this.list[i].ma){
+          return alert("can't not add");
+        }
+      }
+      return this.list.push(new Giaodichnha(ma,date,price,option,area,total));
+    },
+    delete_transaction: function(ma){
+      for(var i = 0;i<this.list.length;i++){
+        if(this.list[i].ma == ma) {
+          this.list.splice(i,1);
+            return "Successful delete";
+                    }
+                }
+                return "ID not exist";
+    },
+    sum_transaction: function(){
+        let sumDat = 0;
+        let sumNha = 0;
+        for(let i = 0;i<this.list.length;i++){
+            if(this.list[i].category == "GD-Dat") sumDat++;
+            if(this.list[i].category == "GD-Nha") sumNha++;
+                }
+                return "Dat: " + sumDat + "; Nha: " + sumNha;
+            },
+    average_Dat: function(){
+        let avg = 0;
+        for(let i = 0;i<this.list.length;i++){
+            if(this.list[i].category == "GD-Dat") avg += this.list[i].total;
+        }
+            return "Average: " + avg/this.list.length;
+        },
+        list_bill_september: function(){
+            for(let i = 0;i<this.list.length;i++){
+            if((this.list[i].date.getMonth()+1) == 9 && (this.list[i].date.getFullYear()== 2021)) console.log(this.list[i]);
+              }
+            }
+  }
+  </script>
+</body>
+</html>

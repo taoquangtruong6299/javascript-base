@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 0;
+        function PIN(pin){
+            if(a>2) return "Xin lỗi bạn đã bị khóa";
+            var pass = "123456";
+            if(pin == pass){
+                a = 0;
+                return "Đã chính xác chào mừng bạn quay trở lại";
+            }
+            if(pin != pass){
+                a++;
+                return "Không chính xác, hãy thử lại";
+            }
+        }
+    </script>
+</body>
+</html>
