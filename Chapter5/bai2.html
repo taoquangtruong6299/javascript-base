@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #search_advance {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button onclick="show_search_advance()" id="show_search_advance">Tim kiem nang cao</button>
+    <div id="search_advance">
+      <ul>
+        <li>category1</li>
+        <li>category1</li>
+        <li>category1</li>
+        <li>category1</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    function show_search_advance(){
+      var a = document.getElementById("show_search_advance");
+      var category = document.getElementById("search_advance");
+
+      var text = a.innerHTML;
+      console.log(text);
+      if(text == "Tim kiem nang cao")
+      {
+        category.style.display = "block";
+        a.innerHTML = "Bo tim kiem nang cao"
+      }
+      else
+      {
+        category.style.display = "none";
+        a.innerHTML = "Tim kiem nang cao"
+      }
+    }
+  </script>
+</body>
+</html>

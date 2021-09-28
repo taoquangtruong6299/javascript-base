@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="clock"></div>
+  <script>
+    setInterval(function clock(){
+      var timer = new Date();
+      var hour = timer.getHours();
+      var minute = timer.getMinutes();
+      var second = timer.getSeconds();
+
+      if(hour < 10) {
+        hour = "0" + hour;
+      }
+      if(minute < 10) {
+        minute = "0" +minute;
+      }
+      if(second < 10) {
+        second = "0" +second;
+      }
+
+      document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second;
+    },1000);
+  </script>
+</body>
+</html>

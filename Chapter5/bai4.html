@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+    .dropdown-content {
+      display: none;
+    }
+
+    .menu__link {
+      display: block;
+      color: black;
+    }
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div>
+      <button onclick="dropdown()" id="dropbtn">menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="" class="menu__link">A</a>
+        <a href="" class="menu__link">B</a>
+        <a href="" class="menu__link">C</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    function dropdown(){
+     document.getElementById("myDropdown").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
